@@ -1,0 +1,27 @@
+<div class="box">
+    <div>  <button (click)="showModalPopup()">+</button>
+    	<form id="form1" name="form1" #form="ngForm" >
+ 
+        <p>
+         
+          <select [(ngModel)]="selectedCity" id="inputCountry" name="inputCountry">
+      
+          <option *ngFor="let city of citys"   [ngValue]="city">{{city.country.countryName}} {{city.cityName}}  </option>
+          </select>
+         
+          
+        </p>
+         
+      
+        
+    </form>
+
+    <label><input  id="checkbox" type="checkbox" name="sendemail" [(ngModel)]="isChecked" /> Guardar Hitorial</label>
+  </div>
+<button  (click)="ConsultarClima()"> Consultar Clima</button>
+  <div *ngIf="WeatherResponse != null">
+      <span>Ciudad </span>
+      <span>Clima: {{WeatherResponse.main.temp}} Sensacion Terminca: {{WeatherResponse.main.feels_like}}</span>
+  </div>
+
+ 

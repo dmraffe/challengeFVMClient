@@ -1,0 +1,35 @@
+<div class="box">
+    <div>{{Mensaje}}</div>
+  </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-md">
+       Pais
+      </div>
+      <div class="col-md">
+       Ciudad
+      </div>
+      <div class="col-md">
+        Clima
+      </div>
+      <div class="col-md">
+      Sensacion Termica
+      </div>
+    </div>
+
+    <div *ngFor="let Hw of HistoryWeather" class="row">
+      <div class="col-md">
+        Pais
+       </div>
+       <div class="col-md">
+        {{Hw.city.cityName}}
+       </div>
+       <div class="col-md">
+        {{Hw.temperature}}
+        
+       </div>
+       <div class="col-md">
+        {{Hw.thermalSensation}}
+       </div>
+    </div>
+  </div>
